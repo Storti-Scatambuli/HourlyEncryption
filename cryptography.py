@@ -9,7 +9,7 @@ key_time = f'{hour}{minute}{second}'
 
 key_time_test = '000000'
 
-text = '''Se o pinto pia, pia na pia, pia da cozinha. A senhora ouve o pinto piar, lá da varanda, piando sem parar. Ele pia que sabe piar, mas pia para chamar o pinto que piava do outro lado da casa.'''
+text = '''Your Text'''
 
 key_cryptography = f'9:{key_time_test}'.split(':')
 

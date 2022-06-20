@@ -2,8 +2,8 @@ import assets
 
 alphabets = assets.alphabetLoad()
 
-#encrypted_text = input('Encrypted Text: ')
-encrypted_text = '''#%Ò5ÒÙûô+5ÒÙû[NÒÙû[Òô[ÒÙû[NÒÙû[Ò_[Òì5bûôÚ[uÒUÒ7%ôÚ5Û[Ò5ê9%Ò5ÒÙûô+5ÒÙû[ÛNÒREÒ_[Ò9[Û[ô_[NÒÙû[ô_5Ò7%pÒÙ[Û[ÛuÒúR%ÒÙû[ÒÁê%Ò7[!%ÒÙû[ÛNÒp[7ÒÙû[ÒÙ[Û[ÒìÚ[p[ÛÒ5ÒÙûô+5ÒÁê%ÒÙû[9[Ò_5Ò5ê+Û5ÒR[_5Ò_[Òì[7[u'''
+encrypted_text = input('Encrypted Text: ')
+encrypted_text_test = '''v5êÛÒS%&+'''
 key = input('Key (number:time): ').split(':')
 encrypted_text = list(encrypted_text)
 
