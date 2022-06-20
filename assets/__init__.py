@@ -27,3 +27,15 @@ def alphabetLoad():
         alphabet[1] = list(alphabet[1][:len(alphabet[1])-1])
         alphabets[index] = alphabet
     return alphabets
+
+def alphabetFind(alphabets, key_criptography):
+    alphabet_criptography = []
+    for criptography in alphabets:
+        if criptography[0] == key_criptography[1]:
+            alphabet_criptography = criptography[1]
+            break
+    if len(alphabet_criptography) == 0:
+        print('Alphabet not find')
+        return None
+    else:
+        return alphabet_criptography

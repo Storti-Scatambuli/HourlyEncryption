@@ -11,15 +11,11 @@ key_time_test = '000000'
 
 text = 'Your Text'
 
-key_criptography = f'48:{key_time_test}'.split(':')
+key_criptography = f'200:{key_time_test}'.split(':')
 
 text_list = list(text)
 
-#Código em construção x_x_x_x
-for criptography in alphabets:
-    if criptography[0] == key_criptography[1]:
-        alphabet_criptography = criptography[1]
-        break
+alphabet_criptography = assets.alphabetFind(alphabets, key_criptography)
 
 for index, caracter in enumerate(text_list):
     caracter_alfabeto_indice = alphabet_criptography.index(caracter)
