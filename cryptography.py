@@ -9,21 +9,26 @@ key_time = f'{hour}{minute}{second}'
 
 key_time_test = '000000'
 
-text = 'Your Text'
+text = '''Se o pinto pia, pia na pia, pia da cozinha. A senhora ouve o pinto piar, lá da varanda, piando sem parar. Ele pia que sabe piar, mas pia para chamar o pinto que piava do outro lado da casa.'''
 
-key_criptography = f'200:{key_time_test}'.split(':')
+key_cryptography = f'9:{key_time_test}'.split(':')
 
 text_list = list(text)
 
-alphabet_criptography = assets.alphabetFind(alphabets, key_criptography)
 
-for index, caracter in enumerate(text_list):
-    caracter_alfabeto_indice = alphabet_criptography.index(caracter)
-    soma = index + int(key_criptography[0]) + caracter_alfabeto_indice
-    if soma >= len(alphabet_criptography):
-        soma = len(alphabet_criptography) - soma
-    text_list[index] = alphabet_criptography[soma]
+alphabet_cryptography = assets.alphabetFind(alphabets, key_cryptography)
+
+for index_text, character in enumerate(text_list):
+    if character == '\n' or character == 'º' or character == '-':
+        continue
+    character_alphabet_index = alphabet_cryptography.index(character)
+    index_cryptography = character_alphabet_index
+    for _ in range(int(key_cryptography[0])):
+        index_cryptography += 1
+        if index_cryptography >= len(alphabet_cryptography):
+            index_cryptography = 0
+    text_list[index_text] = alphabet_cryptography[index_cryptography]
     
     
 texto_criptografado = ''.join(text_list)
-print(texto_criptografado, key_criptography)
+print(texto_criptografado, key_cryptography)
