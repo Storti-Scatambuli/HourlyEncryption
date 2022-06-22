@@ -14,7 +14,8 @@ for index_text, character in enumerate(encrypted_text):
         continue
     character_alphabet_index = alphabet_cryptography.index(character)
     index_criptography = character_alphabet_index
-    for _ in range(int(key[0])):
+    full_sweep = int(key[0]) + index_text
+    for _ in range(full_sweep):
         if index_criptography < 0:
             index_criptography = len(alphabet_cryptography)-1
         index_criptography -= 1    

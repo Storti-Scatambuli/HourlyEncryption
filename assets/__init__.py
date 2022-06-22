@@ -1,6 +1,6 @@
 def alphabetGenerate():
     import random
-    alfabeto = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÇabcdefghijklmnopqrstuvwxyzçÁÀÃÂÉÊÈÍÎÌÓÒÕÔÚÙÛáàãâéèêíîìóòõôúû1234567890,.;:/?][}{-_=+!@#$%&*() '
+    alfabeto = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÇabcdefghijklmnopqrstuvwxyzçÁÀÃÂÉÊÈÍÎÌÓÒÕÔÚÙÛáàãâéèêíîìóòõôúû1234567890,.;:/?][}{-_=+!@#$%&*() ºª°'
 
     alphabet = list(alfabeto)
 
@@ -17,6 +17,7 @@ def alphabetGenerate():
                     minute = str(m).zfill(2)
                     second = str(s).zfill(2)
                     arq.write(f'{hour}{minute}{second}"{text}\n')
+                print(h, m, s)
 
 def alphabetLoad():
     with open('alphabets.txt', 'r') as arq:

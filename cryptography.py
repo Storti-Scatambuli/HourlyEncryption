@@ -9,9 +9,9 @@ key_time = f'{hour}{minute}{second}'
 
 key_time_test = '000000'
 
-text = '''Your Text'''
+text = '''Aaaaaaaa'''
 
-key_cryptography = f'9:{key_time_test}'.split(':')
+key_cryptography = f'9:{key_time}'.split(':')
 
 text_list = list(text)
 
@@ -19,11 +19,12 @@ text_list = list(text)
 alphabet_cryptography = assets.alphabetFind(alphabets, key_cryptography)
 
 for index_text, character in enumerate(text_list):
-    if character == '\n' or character == 'º' or character == '-':
+    if character == '\n' or character == '§' or character == '₢':
         continue
     character_alphabet_index = alphabet_cryptography.index(character)
     index_cryptography = character_alphabet_index
-    for _ in range(int(key_cryptography[0])):
+    full_sweep = int(key_cryptography[0]) + index_text
+    for _ in range(full_sweep):
         index_cryptography += 1
         if index_cryptography >= len(alphabet_cryptography):
             index_cryptography = 0
