@@ -7,7 +7,7 @@ minute = f'{time.localtime().tm_min}'.zfill(2)
 second = f'{time.localtime().tm_sec}'.zfill(2)
 key_time = f'{hour}{minute}{second}'
 
-key_time_test = '235959'
+#key_time_test = '235959'
 
 text = '''Your Text'''
 
