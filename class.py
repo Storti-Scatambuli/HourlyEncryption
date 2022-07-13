@@ -1,4 +1,3 @@
-
 class HourlyEncryption():
     
     def __init__(self, plaintext, alphabetfile='alphabets/alphabets.txt'):    
