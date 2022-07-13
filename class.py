@@ -1,7 +1,7 @@
 
-class HourlyEncryption():   
-    def __init__(self, plaintext, alphabetfile='alphabets/alphabets.txt'):
-        
+class HourlyEncryption():
+    
+    def __init__(self, plaintext, alphabetfile='alphabets/alphabets.txt'):    
         self.plain_text = list(plaintext)
         self.final_text = self.plain_text.copy()
         self.key_cryptography = [0, '000000']
