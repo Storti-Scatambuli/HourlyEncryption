@@ -43,7 +43,7 @@ class HourlyEncryption():
                 if index_cryptography >= len(self.alphabet_cryptography):
                     index_cryptography = 0
             self.final_text[index_text] = self.alphabet_cryptography[index_cryptography]
-        self.final_text = ''.join(self.final_text)
+        return ''.join(self.final_text)
 
     def decryption(self, primarykey, secundarykey):
         
@@ -61,7 +61,7 @@ class HourlyEncryption():
                     index_criptography = len(alphabet_cryptography)-1
                 index_criptography -= 1    
             self.final_text[index_text] = alphabet_cryptography[index_criptography]
-        self.final_text = ''.join(self.final_text)
+        return ''.join(self.final_text)
             
     
 
@@ -70,13 +70,10 @@ if __name__ == '__main__':
     example_text_decrypt = 'Your Text'
     example_key = 23
     encrypt = HourlyEncryption(example_text_decrypt)
-    encrypt.cryptography(example_key)
-    print(encrypt.final_text)
+    print(encrypt.cryptography(example_key))
     print(encrypt.key_cryptography)
     
     example_text_encrypt = 'Nil-aJiZª'
     decrypt = HourlyEncryption(example_text_encrypt)
-    decrypt.decryption(23, 224101)
-    print(decrypt.final_text)
-    
+    print(decrypt.decryption(23, 224101))
     
